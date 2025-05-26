@@ -1,3 +1,4 @@
+import Head from "next/head"
 import type React from "react"
 import "@/app/globals.css"
 import { Inter } from "next/font/google"
@@ -18,6 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+<Head>
+        <meta name="trustpilot-one-time-domain-verification-id" content="8240dd3f-703a-4d69-bd42-b5d1b6e43c4a" />
+      </Head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           {children}
