@@ -166,7 +166,7 @@ export function PaymentModal({ open, onOpenChange, amount = 0.1, onPaymentSucces
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-2">
                 <Cube className="h-6 w-6 text-white" />
-                <span className="text-white font-medium">cryptomus</span>
+                <span className="text-white font-medium">PGPAY</span>
               </div>
               <Button variant="outline" size="sm" className="rounded-full bg-white text-black hover:bg-gray-200 border-0">
                 Sign up
