@@ -218,7 +218,7 @@ export function TokenCreator() {
                     transition={{ duration: 0.5, delay: 0.5 }}
                   >
                     <Button variant="outline" className="border-purple-500/20 text-purple-400 hover:bg-purple-900/30">
-                      View on Explorer
+                      Add Liquidity
                     </Button>
                   </motion.div>
                   <motion.div
