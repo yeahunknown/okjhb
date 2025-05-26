@@ -239,7 +239,7 @@ export default function Home() {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
+                    <a href="https://t.me/wavelaunch" className="text-gray-400 hover:text-purple-400 transition-colors">
                       Telegram
                     </a>
                   </li>
@@ -254,22 +254,22 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-white">Legal</h3>
                 <ul className="space-y-2">
                   <li>
-                    <Link href="/terms" className="text-gray-400 hover:text-purple-400 transition-colors">
+                    <Link href="https://wvl-tos.vercel.app" className="text-gray-400 hover:text-purple-400 transition-colors">
                       Terms
                     </Link>
                   </li>
                   <li>
-                    <Link href="/privacy" className="text-gray-400 hover:text-purple-400 transition-colors">
+                    <Link href="https://wvl-tos.vercel.app" className="text-gray-400 hover:text-purple-400 transition-colors">
                       Privacy
                     </Link>
                   </li>
                   <li>
-                    <Link href="/cookies" className="text-gray-400 hover:text-purple-400 transition-colors">
+                    <Link href="https://wvl-tos.vercel.app" className="text-gray-400 hover:text-purple-400 transition-colors">
                       Cookies
                     </Link>
                   </li>
                   <li>
-                    <Link href="/disclaimer" className="text-gray-400 hover:text-purple-400 transition-colors">
+                    <Link href="https://wvl-tos.vercel.app" className="text-gray-400 hover:text-purple-400 transition-colors">
                       Disclaimer
                     </Link>
                   </li>
