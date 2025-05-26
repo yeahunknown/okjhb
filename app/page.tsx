@@ -116,7 +116,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-500 animate-fade-in animation-delay-1200">
                   <Skull className="h-4 w-4" />
-                  <span>Support channel: t.me/voxelaunch</span>
+                  <span>Support channel: t.me/wavelaunch</span>
                 </div>
               </div>
               <div className="flex items-center justify-center">
