@@ -54,13 +54,13 @@ export default function CreateLayout({
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <p className="text-sm text-gray-500">© 2025 big @loficat ngmi if u copy.</p>
           <div className="flex items-center gap-4">
-            <Link href="/terms" className="text-sm text-gray-500 hover:text-purple-400 transition-colors">
+            <Link href="https://wvl-tos.vercel.app" className="text-sm text-gray-500 hover:text-purple-400 transition-colors">
               Terms
             </Link>
-            <Link href="/privacy" className="text-sm text-gray-500 hover:text-purple-400 transition-colors">
+            <Link href="https://wvl-tos.vercel.app" className="text-sm text-gray-500 hover:text-purple-400 transition-colors">
               Privacy
             </Link>
-            <Link href="/contact" className="text-sm text-gray-500 hover:text-purple-400 transition-colors">
+            <Link href="https://t.me/wavelaunch" className="text-sm text-gray-500 hover:text-purple-400 transition-colors">
               Contact
             </Link>
           </div>
