@@ -22,7 +22,7 @@ export function WalletConnect() {
     // setWalletAddress("8xH5f...3kNp")
     // setConnected(true)
     // setNoWallet(false)
-    window.open("https://t.me/voxelaunch", "_blank")
+    window.open("https://t.me/wavelaunch", "_blank")
   }
 
   const continueWithoutWallet = () => { 
