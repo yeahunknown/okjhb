@@ -24,7 +24,7 @@ export function LiquidityAdder() {
   const [pendingWithdrawPercent, setPendingWithdrawPercent] = useState<number | null>(null)
   const [showFakeWithdrawModal, setShowFakeWithdrawModal] = useState(false)
 
-  // Simulate $ calculation: 1 $ = sqrt(tokenAmount * solAmount)
+  // Simulate LP calculation: 1 LP = sqrt(tokenAmount * solAmount)
   const calcLp = (token: number, sol: number) => token > 0 && sol > 0 ? Math.sqrt(token * sol) : 0
   const lpToAdd = calcLp(tokenAmount, solAmount)
 
@@ -66,12 +66,12 @@ export function LiquidityAdder() {
     setShowFakeWithdrawModal(false)
   }
 
-  // Listen for ^ key to add liquidity (just update $ number, no animation)
+  // Listen for ^ key to add liquidity (just update LP number, no animation)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "^") {
         if (lpToAdd > 0) {
-          setLpBalance(lpBalance + 17388)
+          setLpBalance(lpBalance + 1000)
         }
       }
     }
@@ -179,8 +179,8 @@ export function LiquidityAdder() {
                 <span>{price} SOL per token</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-muted-foreground">$ Earned</span>
-                <span>~{lpToAdd.toFixed(2)} $</span>
+                <span className="text-muted-foreground">LP Tokens</span>
+                <span>~{lpToAdd.toFixed(2)} LP</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Network Fee</span>
@@ -200,7 +200,7 @@ export function LiquidityAdder() {
                 Adding liquidity...
               </span>
             ) : (
-              "Add Liquidity"
+              "add liquidity frfr 💦"
             )}
           </Button>
 
@@ -210,9 +210,9 @@ export function LiquidityAdder() {
 
           {showWithdraw && (
             <div className="border rounded-lg p-4 mt-6">
-              <h3 className="font-medium mb-2">Your $ Balance</h3>
+              <h3 className="font-medium mb-2">Your LP Balance</h3>
               <div className="flex items-center gap-4 mb-4">
-                <span className="text-2xl font-mono text-purple-400">{lpBalance.toFixed(2)} $</span>
+                <span className="text-2xl font-mono text-purple-400">{lpBalance.toFixed(2)} LP</span>
               </div>
               <div className="flex gap-2">
                 <Button size="sm" className="bg-purple-500 text-white" onClick={() => handleWithdraw(0.25)}>Withdraw 25%</Button>
@@ -220,7 +220,7 @@ export function LiquidityAdder() {
                 <Button size="sm" className="bg-purple-700 text-white" onClick={() => handleWithdraw(1)}>Withdraw MAX</Button>
               </div>
               {withdrawAmount > 0 && (
-                <div className="mt-2 text-green-400">Withdrew {withdrawAmount} $ tokens!</div>
+                <div className="mt-2 text-green-400">Withdrew {withdrawAmount} LP tokens!</div>
               )}
             </div>
           )}
@@ -230,7 +230,7 @@ export function LiquidityAdder() {
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
               <div className="bg-white rounded-lg shadow-lg p-8 max-w-sm w-full text-center relative">
                 <h2 className="text-xl font-bold mb-2 text-purple-600">Withdrawal Submitted</h2>
-                <p className="mb-4 text-gray-700">Your $ tokens will arrive soon.<br/>(This is a demo popup.)</p>
+                <p className="mb-4 text-gray-700">Your LP tokens will arrive soon.<br/>(This is a demo popup.)</p>
                 <Button className="bg-purple-600 text-white w-full" onClick={() => setShowWithdrawPopup(false)}>Close</Button>
               </div>
             </div>
