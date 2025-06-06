@@ -200,7 +200,7 @@ export function LiquidityAdder() {
                 Adding liquidity...
               </span>
             ) : (
-              "add liquidity frfr 💦"
+              "Add Liquidity"
             )}
           </Button>
 
