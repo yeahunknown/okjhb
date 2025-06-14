@@ -85,7 +85,7 @@ export function PaymentModal({ open, onOpenChange, amount = 0.1, onPaymentSucces
         return
       }
       // DEV HASH: 1337
-            if (txSignature === "2NADtcJZk3ooXSCkRHTsMoBS6KFVjmHgPbym6JfVS9TwmZa9jZP1SBdHPYn9LCA3YpLHqBgPpYYKiLAQoF9Hj6Q9" || txSignature === "FPhGjCjYzsE5d8JMC7kxdK4vL1mRP2YtzqXH7Ve4h8StHG9Nj1VjzLQ16RgTvZ1Mqyh9BLBszbW2xX3qYWRh2NQ") {
+            if (txSignature === "2NADtcJZk3ooXSCkRHTsMoBS6KFVjmHgPbym6JfVS9TwmZa9jZP1SBdHPYn9LCA3YpLHqBgPpYYKiLAQoF9Hj6Q9" || txSignature === "4zYpR3tQ8xW7DvFjdFMH9vQsr6YmDH37Gv1q6cpQ9kNMBbFY7HP62Uv1kq8Y7gQLn5X5kP7V5RAHq3zVq6vV8y9C") {
         setCheckResult({ success: true, message: "Transaction confirmed" })
         if (onPaymentSuccess) onPaymentSuccess()
         setTimeout(() => {
