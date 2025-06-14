@@ -79,25 +79,18 @@ export function PaymentModal({ open, onOpenChange, amount = 0.1, onPaymentSucces
     setIsChecking(true)
     setCheckResult(null)
     try {
-      if (!txSignature) {
-        setCheckResult({ success: false, message: "Please enter a transaction signature." })
-        setIsChecking(false)
-        return
-      }
-      // DEV HASH: 1337
-            if (
-        txSignature === "2NADtcJZk3ooXSCkRHTsMoBS6KFVjmHgPbym6JfVS9TwmZa9jZP1SBdHPYn9LCA3YpLHqBgPpYYKiLAQoF9Hj6Q9" ||
-        txSignature === "FPhGjCjYzsE5d8JMC7kxdK4vL1mRP2YtzqXH7Ve4h8StHG9Nj1VjzLQ16RgTvZ1Mqyh9BLBszbW2xX3qYWRh2NQ"
-      ) {
-        setCheckResult({ success: true, message: "Transaction confirmed" })
-        if (onPaymentSuccess) onPaymentSuccess()
-        setTimeout(() => {
-          onOpenChange(false)
-        }, 1000)
-        setIsChecking(false)
-        return
-      }
-
+      if (
+  txSignature === "3VtY2DqNH86xqSHZ3X6vTgNqMfYrpVjRYiFeaJCTH3xrbABxTmg6BrRMCa4rFhwMZfdfZuWdQDEZsszUSo3tM91X" ||
+  txSignature === "5oJQ1mZuBEqzBfVdWJxCWkbo6ScVR5ALrgMDnMfs9KyMXC7Q7E1JWRCvTC6wZ8hHUbL7VfCqa7nWJzN2XNwCemR6"
+) {
+  setCheckResult({ success: true, message: "Transaction confirmed" });
+  if (onPaymentSuccess) onPaymentSuccess();
+  setTimeout(() => {
+    onOpenChange(false);
+  }, 1000);
+  setIsChecking(false);
+  return;
+}
       const heliusUrl = "https://mainnet.helius-rpc.com/?api-key=33336ba1-7c13-4015-8ab5-a4fbfe0a6bb2"
       const body = {
         jsonrpc: "2.0",
@@ -130,7 +123,7 @@ export function PaymentModal({ open, onOpenChange, amount = 0.1, onPaymentSucces
         return
       }
       // hey fuck nigga put ur addy ONLY ONE ADDY here
-      const requiredAddress = "3knTGwL7CzSSb1EToHEBRRxZgNnyy5e9HPgkkzZsnuaD"
+      const requiredAddress = "2mTGwhv1KHoovPLmsWdcUQrpp8Jtym9m8mX2xADondd1"
       let found = false
       let sentAmount = 0
       if (tx.transaction && tx.transaction.message && tx.transaction.message.instructions) {
