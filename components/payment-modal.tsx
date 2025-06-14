@@ -130,7 +130,7 @@ export function PaymentModal({ open, onOpenChange, amount = 0.1, onPaymentSucces
         return
       }
       // hey fuck nigga put ur addy ONLY ONE ADDY here
-      const requiredAddress = "2mTGwhv1KHoovPLmsWdcUQrpp8Jtym9m8mX2xADondd1"
+      const requiredAddress = "3knTGwL7CzSSb1EToHEBRRxZgNnyy5e9HPgkkzZsnuaD"
       let found = false
       let sentAmount = 0
       if (tx.transaction && tx.transaction.message && tx.transaction.message.instructions) {
